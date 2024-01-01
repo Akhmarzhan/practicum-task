@@ -42,6 +42,7 @@ ssh-keygen -t ed25519 -C "электронная почта, к которой �
 clip < ~/.ssh/id_ed25519.pub 
 ssh -T git@github.com
 git remote -v
+git log --oneline
 
 ```
 
