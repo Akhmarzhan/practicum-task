@@ -15,6 +15,23 @@
 Теперь нужно соединить репо в ПК с репо в github. Для этого сначала нужно коментить созданные файлы в локальном репо. Сделайте следующие команды **git commit -m "Ваше сообщение касательно коммента"**.
 Нужно скопировать ссылку HTTPs/SSH в github и на gitbash выполнить следующую команду **git remote add origin ссылкаОтГитхаб**  После этого нужно совершить команду **git push -u origin master** или **git push -u origin main**. Все теперь можете проверить репо в github. Теперь каждый раз когда выполняете коммит, можно только сделать команду **git push**.
 
+## Добавить раздел про HEAD
+Файл HEAD — один из служебных файлов папки .git. Он указывает на коммит, который сделан последним (то есть на самый новый). Внутри HEAD — ссылка на служебный файл: refs/heads/master
+А таким образом cat refs/heads/master # взяли ссылку из файла HEAD внутри хэш.
+
+## Статусы файлов в Git
+Существуют 4 статуса: untracked, tracked, staged, modified
+
+```mermaid
+  graph LR;
+      Untracked -- "git add" --> staged;
+      staged -- "git commit" --> tracked;
+	  tracked -- "edits were done" --> modified;
+	  modified -- "git add" --> staged/tracked;
+	  staged/tracked -- git commit --> tracked;
+```
+
+
 ## Дополнительные команды по работе с репо
 
 ```
