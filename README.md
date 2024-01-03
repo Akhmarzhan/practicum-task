@@ -31,6 +31,14 @@
 	  staged/tracked -- git commit --> tracked;
 ```
 
+## Чтобы отменить git add
+git restore --staged fileName.extension    
+
+## Чтобы отменить git commit
+git reset --hard commitHashThatNeedsBeRevertedTO (not latest hash, but corresponding one)
+
+## Чтобы отменить изменение в файле вообще 
+git restore fileName
 
 ## Дополнительные команды по работе с репо
 
