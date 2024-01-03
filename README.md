@@ -60,6 +60,7 @@ clip < ~/.ssh/id_ed25519.pub
 ssh -T git@github.com
 git remote -v
 git log --oneline
+git commit --amend --no-edit
 
 ```
 
