@@ -40,6 +40,11 @@ git reset --hard commitHashThatNeedsBeRevertedTO (not latest hash, but correspon
 ## Чтобы отменить изменение в файле вообще 
 git restore fileName
 
+## Чтобы сравнить 2 коммитов или отследить изменения в файлах которые ранне закоммитировались
+git diff
+
+
+
 ## Дополнительные команды по работе с репо
 
 ```
