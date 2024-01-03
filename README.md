@@ -41,7 +41,8 @@ git reset --hard commitHashThatNeedsBeRevertedTO (not latest hash, but correspon
 git restore fileName
 
 ## Чтобы сравнить 2 коммитов или отследить изменения в файлах которые ранне закоммитировались
-git diff
+git diff           чтобы сравнить файлы после git commit -m ""
+git diff --staged  чтобы сравнить файлы после git add
 
 
 
@@ -75,6 +76,8 @@ git remote -v
 git log --oneline
 git commit --amend --no-edit
 git commit --amend -m ""
+echo "Message that will be added in the last line" >> fileName
+echo "Message that will replace whole content of the file" > fileName
 
 ```
 
