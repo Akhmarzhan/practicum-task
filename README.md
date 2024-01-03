@@ -61,6 +61,7 @@ ssh -T git@github.com
 git remote -v
 git log --oneline
 git commit --amend --no-edit
+git commit --amend -m ""
 
 ```
 
