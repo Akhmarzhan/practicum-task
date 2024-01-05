@@ -43,6 +43,9 @@ git restore fileName
 ## Чтобы сравнить 2 коммитов или отследить изменения в файлах которые ранне закоммитировались
 git diff           чтобы сравнить файлы после git commit -m ""
 git diff --staged  чтобы сравнить файлы после git add
+git diff hash1 hash2  чтобы сравнить между коммитами 
+git diff hash1 HEAD   чтобы сравнить любой коммит с HEAD
+
 
 
 
