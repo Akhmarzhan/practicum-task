@@ -82,13 +82,13 @@ git push -u origin branchName - это для того чтобы пушить �
 ```
 
 ```mermaid
-  graph LR;
-      id["git clone URL"] -- "cloned project was intended to modify in new branch in your PC" --> id["git checkout -b brnch1"];
-      id["git checkout -b brnch1"] -- "after modifying the code switched to main branch" --> id["git checkout master"];
-	  id["git checkout master"]  -- "new version of repo pulled from GitHub" --> id["git pull"] ;
-	  id["git pull"] -- "switched to your branch order to update it with new repo" --> id["git checkout brnch1"] ;
-	  id["git checkout brnch1"] -- "branches merged, conflicts were solved" --> id["git merge master"] ;
-	  id["git merge master"] -- "your modifications were pushed to gitHub"  --> id["git push -u origin brnch1"];
+  graph TB;
+      id1["git clone URL"] -- "cloned project was intended to modify in new branch in your PC" --> id["git checkout -b brnch1"];
+      id1["git checkout -b brnch1"] -- "after modifying the code switched to main branch" --> id["git checkout master"];
+	  id1["git checkout master"]  -- "new version of repo pulled from GitHub" --> id["git pull"] ;
+	  id1["git pull"] -- "switched to your branch order to update it with new repo" --> id["git checkout brnch1"] ;
+	  id1["git checkout brnch1"] -- "branches merged, conflicts were solved" --> id["git merge master"] ;
+	  id1["git merge master"] -- "your modifications were pushed to gitHub"  --> id["git push -u origin brnch1"];
 ```
 
 
