@@ -45,14 +45,33 @@ git diff           чтобы сравнить файлы после git commit 
 git diff --staged  чтобы сравнить файлы после git add
 git diff hash1 hash2  чтобы сравнить между коммитами 
 git diff hash1 HEAD   чтобы сравнить любой коммит с HEAD
+git diff branchName1 branchName2     чтобы сравнить изменения между ветками
+git diff branchName commitHashOfBranchName2     чтобы сравнить ветку с хэшом коммита другой ветки
+git diff HEAD~ HEAD чтобы сравнить коммиты текущей ветки (текущий и предыдущий -1)
+git diff branchName~ branchName   тоже самое что выше, чтобы сравнить коммиты внутри ветки с разницей -1
+git diff latestHash~ latestHash тоже самое что выше, чтобы сравнить коммиты внутри ветки с разницей -1
 
 
+## Управлять ветками
+git branch  - чтобы проверить какие ветки есть и в каком находимся
+git branch branchName - чтобы создать ветку
+git checkout - чтобы переходить в другую ветку
+git checkout -b branchName  - это комманда позволить за одно создать и переходить в данную ветку
+git merge branchNameThatNeedsToMergeWith
+git branch -d branchName1 branchName2
+git push -u origin branchName - это для того чтобы пушить текущую ветку в удаленный gitHub репозиторий
 
+```mermaid
+  graph LR;
+      git clone URL -- "project cloned to own PC" --> git checkout -b brnch1;
+      brnch1 -- "make modifications" --> git checkout master;
+	  git pull -- "because someone already modifed it" --> git checkout brnch1;
+	  git merge master -- "remote repo merged to your BRANCH" --> git push -u origin brnch1;
+```
 
 ## Дополнительные команды по работе с репо
 
 ```
-
 rm наименованиеФайлаДляУдаление.расширение
 rmdir наименованиеПапкикотораяПустая
 rmdir -r  наименованиеПапкикотораяНеПустая
@@ -75,12 +94,13 @@ ls -a ~/.ssh
 ssh-keygen -t ed25519 -C "электронная почта, к которой привязан ваш аккаунт на GitHub"
 clip < ~/.ssh/id_ed25519.pub 
 ssh -T git@github.com
-git remote -v
+git remote -v      чтобы проверить локальный и удаленный репос были соединены
 git log --oneline
 git commit --amend --no-edit
 git commit --amend -m ""
 echo "Message that will be added in the last line" >> fileName
 echo "Message that will replace whole content of the file" > fileName
+git clone URLfromGitHub
 
 ```
 
