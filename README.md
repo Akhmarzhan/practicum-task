@@ -86,7 +86,7 @@ git push -u origin branchName - это для того чтобы пушить �
 
 ```mermaid
   graph LR;
-      Untracked because-- "git add" --> staged;
+      Untracked -- "git add" --> staged;
       staged -- "git commit" --> tracked;
 	  tracked -- "edits were done" --> modified;
 	  modified -- "git add" --> staged/tracked;
