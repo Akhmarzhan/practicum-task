@@ -75,12 +75,22 @@ git branch -d branchName1 branchName2
 
 git push -u origin branchName - это для того чтобы пушить текущую ветку в удаленный gitHub репозиторий
 
+
 ```mermaid
   graph LR;
       git clone URL -- "project cloned to own PC" --> git checkout b brnch1;
       brnch1 -- "make modifications" --> git checkout master;
 	  git pull -- "because someone already modifed it" --> git checkout brnch1;
 	  git merge master -- "remote repo merged to your BRANCH" --> git push u origin brnch1;
+```
+
+```mermaid
+  graph LR;
+      Untracked because-- "git add" --> staged;
+      staged -- "git commit" --> tracked;
+	  tracked -- "edits were done" --> modified;
+	  modified -- "git add" --> staged/tracked;
+	  staged/tracked -- git commit --> tracked;
 ```
 
 ## Дополнительные команды по работе с репо
