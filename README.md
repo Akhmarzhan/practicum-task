@@ -78,10 +78,10 @@ git push -u origin branchName - это для того чтобы пушить �
 
 ```mermaid
   graph LR;
-      git clone URL -- "project cloned to own PC" --> git checkout b brnch1;
-      brnch1 -- "make modifications" --> git checkout master;
-	  git pull -- "because someone already modifed it" --> git checkout brnch1;
-	  git merge master -- "remote repo merged to your BRANCH" --> git push u origin brnch1;
+      id["git clone URL"] -- "project cloned to own PC" --> id["git checkout b brnch1"];
+      id["brnch1"] -- "make modifications" --> git checkout id["master"];
+	  id["git pull"] -- "because someone already modifed it" --> id["git checkout brnch1"];
+	  id["git merge master"] -- "remote repo merged to your BRANCH" --> id["git push u origin brnch1"];
 ```
 
 ```mermaid
