@@ -75,11 +75,7 @@ git branch -d branchName1 branchName2
 
 git push -u origin branchName - это для того чтобы пушить текущую ветку в удаленный gitHub репозиторий
 
-
-```mermaid
-  graph LR;
-      id1["git clone URL"] -- "cloned project was intended to modify in new branch in your PC" --> id["git checkout -b brnch1"];
-```
+git pull - чтобы обновить свой код с внесенными изменениями через gitHub другими разрабами
 
 ```mermaid
   graph TB;
