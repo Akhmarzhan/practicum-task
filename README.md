@@ -134,6 +134,8 @@ rm -rf  наименованиеПапкикотораяНеПустая
 
 cat наименованиеФайлаКоторуюНужноПосмтреть содержание
 
+cat fileName.orig  - чтобы посмотреть файл до решения конфликта
+
 pwd
 
 ls
@@ -185,6 +187,8 @@ echo "Message that will replace whole content of the file" > fileName
 git clone URLfromGitHub
 
 git log --graph --oneline
+
+git mergetool - для решения конфлика в ручную
 
 ```
 
